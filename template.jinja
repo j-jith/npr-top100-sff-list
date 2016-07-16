@@ -2,23 +2,87 @@
 <html lang="en">
 <head>
 <style>
+
+body {
+    background-color: #ffdb4d;
+}
+
+table, th, td {
+    border: 0px;
+    border-collapse: collapse;
+}
+
+#banner {
+    text-align: center;
+}
+
+#booklist {
+    float: left;
+    width: 70%;
+    height: 100%;
+    background-color: #ffdb4d;
+}
+
+#counterbox {
+    float: left;
+    width: 30%;
+    background-color: #ffdb4d;
+    position: fixed;
+    left: 70%;
+    top: 50%;
+    text-align: center;
+}
+
 #books tr {
     background-color: #ffdb4d;
 }
+
 #books tr:nth-child(even) {
     background-color: #ffd633;
 }
+
 </style>
+<script type='text/javascript'>
+function calculate_score()
+{
+    //source: http://www.coderanch.com/t/120677/HTML-CSS-JavaScript/find-Checkboxes
+    var inputs = document.getElementsByTagName("input"); //or document.forms[0].elements;
+    var cbs = []; //will contain all checkboxes
+    var checked = []; //will contain all checked checkboxes
+    for (var i = 0; i < inputs.length; i++) {
+      if (inputs[i].type == "checkbox") {
+        cbs.push(inputs[i]);
+        if (inputs[i].checked) {
+          checked.push(inputs[i]);
+        }
+      }
+    }
+    var nbCbs = cbs.length; //number of checkboxes
+    var nbChecked = checked.length; //number of checked checkboxes
+    document.getElementById("countertext").textContent=checked.length;
+}
+</script>
 <meta charset="UTF-8" />
 <title>Top 100 Science-Fiction & Fantasy Books: NPR</title>
 </head>
 <body>
 <div id='container'>
+    <div id='banner'>
+    <a href='http://www.npr.org/2011/08/11/139085843/your-picks-top-100-science-fiction-fantasy-books'><h2>NPR List of Top 100 Science-Fiction and Fantasy Books</h2></a>
+    <h3>Check how many you have read!</h3>
+    </div><!-- banner -->
+    <div id='booklist'>
     <table id='books'>
+    <tr><th>Book</th><th>Read?</th>
     {% for book in books %}
-    <tr><td>{{ book.position }}. {{ book.title}} by {{ book.author }}<br>{{ book.description }}</td></tr>
+    <tr><td>{{ book.position }}. <em>{{ book.title}}</em> by {{ book.author }}<br>{{ book.description }}</td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
     {% endfor %}
     </table>
+</div> <!-- booklist -->
+<div id='counterbox'>
+    <h3>You have read <span id='countertext'>x</span>/100 books.</h3>
+</div> <!-- counter -->
 </div> <!-- container -->
 </body>
 </html>

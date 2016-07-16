@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+<style>
+
+body {
+    background-color: #ffdb4d;
+}
+
+table, th, td {
+    border: 0px;
+    border-collapse: collapse;
+}
+
+#banner {
+    text-align: center;
+}
+
+#booklist {
+    float: left;
+    width: 70%;
+    height: 100%;
+    background-color: #ffdb4d;
+}
+
+#counterbox {
+    float: left;
+    width: 30%;
+    background-color: #ffdb4d;
+    position: fixed;
+    left: 70%;
+    top: 50%;
+    text-align: center;
+}
+
+#books tr {
+    background-color: #ffdb4d;
+}
+
+#books tr:nth-child(even) {
+    background-color: #ffd633;
+}
+
+</style>
+<script type='text/javascript'>
+function calculate_score()
+{
+    //source: http://www.coderanch.com/t/120677/HTML-CSS-JavaScript/find-Checkboxes
+    var inputs = document.getElementsByTagName("input"); //or document.forms[0].elements;
+    var cbs = []; //will contain all checkboxes
+    var checked = []; //will contain all checked checkboxes
+    for (var i = 0; i < inputs.length; i++) {
+      if (inputs[i].type == "checkbox") {
+        cbs.push(inputs[i]);
+        if (inputs[i].checked) {
+          checked.push(inputs[i]);
+        }
+      }
+    }
+    var nbCbs = cbs.length; //number of checkboxes
+    var nbChecked = checked.length; //number of checked checkboxes
+    document.getElementById("countertext").textContent=checked.length;
+}
+</script>
+<meta charset="UTF-8" />
+<title>Top 100 Science-Fiction & Fantasy Books: NPR</title>
+</head>
+<body>
+<div id='container'>
+    <div id='banner'>
+    <a href='http://www.npr.org/2011/08/11/139085843/your-picks-top-100-science-fiction-fantasy-books'><h2>NPR List of Top 100 Science-Fiction and Fantasy Books</h2></a>
+    <h3>Check how many you have read!</h3>
+    </div><!-- banner -->
+    <div id='booklist'>
+    <table id='books'>
+    <tr><th>Book</th><th>Read?</th>
+    
+    <tr><td>1. <em>The Lord Of The Rings</em> by J.R.R. Tolkien<br><p>Tolkien's seminal three-volume epic chronicles the War of the Ring, in which Frodo the hobbit and his companions set out to destroy the evil Ring of Power and restore peace to Middle-earth. The beloved trilogy still casts a long shadow, having established some of the most familiar and enduring tropes in fantasy literature. </p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>2. <em>The Hitchhiker's Guide To The Galaxy</em> by Douglas Adams<br><p>In the first, hilarious volume of Adams' Hitchhiker's series, reluctant galactic traveler Arthur Dent gets swept up in some literally Earth-shattering events involving aliens, sperm whales, a depressed robot, mice who are more than they seem, and some really, <em>really</em> bad poetry.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>3. <em>Ender's Game</em> by Orson Scott Card<br><p>Young Andrew "Ender" Wiggin, bred to be a genius, is drafted to Battle School where he trains to lead the century-long fight against the alien Buggers.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>4. <em>The Dune Chronicles</em> by Frank Herbert<br><p>Follows the adventures of Paul Atreides, the son of a betrayed duke  given up for dead on a treacherous desert planet and adopted by its  fierce, nomadic people, who help him unravel his most unexpected  destiny.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>5. <em>A Song Of Ice And Fire Series</em> by George R.R. Martin<br><p>As the Seven Kingdoms face a generation-long winter, the royal Stark family confronts the poisonous plots of the rival Lannisters, the emergence of the Neverborn demons, the arrival of barbarian hordes, and other threats.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>6. <em>1984</em> by George Orwell<br><p>Portrays life in a future time when a totalitarian government watches over all citizens and directs all activities.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>7. <em>Fahrenheit 451</em> by Ray Bradbury<br><p>In a far future world, television dominates, and books are outlawed. The totalitarian regime has ordered all books to be burned by "firemen," whose job is to start the fires rather than stop them. But one fireman begins to see the value of the printed word.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>8. <em>The Foundation Trilogy</em> by Isaac Asimov<br><p>A band of psychologists, under the leadership of psychohistorian Hari  Seldon, plant a colony to encourage art, science, and technology in the  declining Galactic Empire and to preserve the accumulated knowledge of  humankind.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>9. <em>Brave New World</em> by Aldous Huxley<br><p>Huxley's classic prophetic novel describes the socialized horrors of a futuristic utopia devoid of individual freedom.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>10. <em>American Gods</em> by Neil Gaiman<br><p>On the plane home to attend the funerals of his wife and best friend,  Shadow, an ex-con, encounters an enigmatic stranger who seems to know a  lot about him. When Shadow accepts the stranger's job offer, he finds  himself plunged into a perilous game with the highest of stakes: the  soul of America itself.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>11. <em>The Princess Bride</em> by William Goldman<br><p>This tale of a handsome farm boy who, aided by a drunken swordsman and a gentle giant, rescues a beautiful princess named Buttercup comes with a slyly humorous, metafictional edge: Goldman claims to have merely abridged an earlier text by one "S. Morgenstern" (actually a pseudonym) and peppers his text with clever commentary. </p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>12. <em>The Wheel Of Time Series</em> by Robert Jordan<br><p>At 13 volumes and counting, this sweeping &#8212; some would say sprawling &#8211; richly imagined epic chronicles the struggle between servants of the Dark One and those of the champion of light known as the Dragon Reborn.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>13. <em>Animal Farm</em> by George Orwell<br><p>Farm animals overthrow their human owners and set up their own deeply (and familiarly) flawed government. Orwell's mordant satire of totalitarianism is still a mainstay of ninth-grade reading lists.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>14. <em>Neuromancer</em> by William Gibson<br><p>Gibson's groundbreaking debut novel follows Case, a burned-out computer  whiz, who is asked to steal a security code that is locked in the most  heavily guarded databank in the solar system. A seminal work in the  genre that would come to be known as cyberpunk.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>15. <em>Watchmen</em> by Alan Moore<br><p>As former members of a disbanded group of superheroes called the Crimebusters start turning up dead, the remaining members of the group try to discover the identity of the murderer before they, too, are killed. <em>A graphic novel</em>.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>16. <em>I, Robot</em> by Isaac Asimov<br><p>Isaac Asimov changed our perception of robots forever when he formulated the laws governing their behavior. In I, Robot, Asimov chronicles the development of the robot through a series of interlinked stories: from its primitive origins in the present to its ultimate perfection in the not-so-distant future &#8212; a future in which humanity itself may be rendered obsolete.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>17. <em>Stranger In A Strange Land</em> by Robert A. Heinlein<br><p>Valentine Michael Smith, born and raised on Mars, arrives on Earth stunning Western culture with his superhuman abilities.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>18. <em>The Kingkiller Chronicles</em> by Patrick Rothfuss<br><p>This suspenseful coming-of-age story folllows Kvothe as he recounts his  transformation from a magically gifted young man into the most notorious  wizard, musician, thief and assassin in his world.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>19. <em>Slaughterhouse-Five</em> by Kurt Vonnegut<br><p>Billy Pilgrim returns home from World War II only to be kidnapped by aliens from the planet Tralfamadore, who teach him that time is an eternal present.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>20. <em>Frankenstein</em> by Mary Wollstonecraft Shelley<br><p>Mary Shelley's chilling portrait of a scientist obsessed with creating life (whose eventual success comes at too great a cost) was among the first works of science fiction ever produced. Its potent allegorical power, compelling ethical and philosophical themes, and its sheer creepiness have ensured it remains one of the most enduring and influential as well.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>21. <em>Do Androids Dream Of Electric Sheep?</em> by Philip K. Dick<br><p>Dick's trippy novel tells of sophisticated off-world androids who turn against their creators, slip back to a post-apocalyptic Earth, and must be hunted down by bounty hunter Rick Deckard. The book inspired &#8212; albeit very loosely &#8212; the 1982 Ridley Scott film <em>Blade Runner</em>.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>22. <em>The Handmaid's Tale</em> by Margaret Atwood<br><p>A chilling look at the near future presents the story of Offred, a Handmaid in the Republic of Gilead, once the United States, an oppressive world where women are no longer allowed to read and are valued only as long as they are viable for reproduction.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>23. <em>The Dark Tower Series</em> by Stephen King<br><p>Roland, the world's last gunslinger, tracks an enigmatic Man in Black  toward a forbidding dark tower, fighting forces both mortal and  other worldly on his quest.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>24. <em>2001: A Space Odyssey</em> by Arthur C. Clarke<br><p>Two astronauts find their journey into space and their very lives jeopardized by the jealousy of an extraordinary computer named HAL.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>25. <em>The Stand</em> by Stephen King<br><p>A monumentally devastating plague leaves only a few survivors who, while experiencing dreams of a battle between good and evil, move toward an actual confrontation as they migrate to Boulder, Colo.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>26. <em>Snow Crash</em> by Neal Stephenson<br><p>Weaving contemporary imagery with Sumerian myths, Stephenson's third novel revolves around a mysterious "pseudo-narcotic" Snow Crash that is capable of affecting people both within &#8212; and without &#8212; the alternate-reality Internet called the "Metaverse."</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>27. <em>The Martian Chronicles</em> by Ray Bradbury<br><p>The tranquillity of Mars is disrupted by the earthmen who have come to conquer space, colonize the planet, and escape a doomed Earth.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>28. <em>Cat's Cradle</em> by Kurt Vonnegut<br><p>A young writer decides to interview the children of a scientist primarily responsible for the creation of the atomic bomb.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>29. <em>The Sandman Series</em> by Neil Gaiman<br><p>Gaiman originally told his tale of Morpheus, the Dream King, whose interactions with mortals rarely end well, and whose fractious extended family includes the personifications of Death, Despair, Desire and Destiny, in a 75-issue comic book series over several years; the hugely influential series is now collected in ten trade volumes.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>30. <em>A Clockwork Orange</em> by Anthony Burgess<br><p>Burgess created his own youth slang for this acid satire of contemporary culture which follows young Alex as he makes his merry way through a dystopia of drugs, sex and ruthless violence, only to be chosen for a psychological experiment meant to mend his ways.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>31. <em>Starship Troopers</em> by Robert A. Heinlein<br><p>In one of Robert A. Heinlein's most controversial novels, a recruit of the future goes through the toughest boot camp in the universe and into battle with the Terran Mobile Infantry against humankind's most frightening enemy.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>32. <em>Watership Down</em> by Richard Adams<br><p>Often described as "the <em>Aeneid </em>of<em> </em>rabbits," this is the story of young rabbit Fiver and his brother Hazel, who set out on an epic journey to find a new home after their own warren is destroyed. <em>Watership Down</em> began as a series of improvised stories author Richard Adams told his young daughters during car trips. Adams also invented the language, Lapine, spoken by Hazel and Fiver.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>33. <em>Dragonflight</em> by Anne McCaffrey<br><p>At a time when the number of Dragonriders has fallen too low for safety  and only one Weyr trains the creatures and their riders, the Red Star  approaches Pern, threatening the planet with disaster.<em/></p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>34. <em>The Moon Is A Harsh Mistress</em> by Robert A. Heinlein<br><p>A one-armed computer technician, a radical blond bombshell, an aging academic and a sentient all-knowing computer lead the lunar population in a revolution against Earth's colonial rule.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>35. <em>A Canticle For Leibowitz</em> by Walter M. Miller Jr.<br><p>Miller's 1959 novel follows the Monks of the Order of St. Leibowitz as they attempt to preserve the remnants of civilization after a nuclear war.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>36. <em>The Time Machine</em> by H.G. Wells<br><p>Wells' classic 1895 story of an unassuming British inventor who creates a device that sends him hurtling into the far future &#8211; A.D. 802,701, to be precise &#8211; where subterranean Morlocks prey upon the childlike Eloi.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>37. <em>20,000 Leagues Under The Sea</em> by Jules Verne<br><p>Professor Arronax and his two companions, trapped aboard a fantastic submarine as prisoners of the deranged Captain Nemo, come face to face with exotic ocean creatures and strange sights hidden from the world above.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>38. <em>Flowers For Algernon</em> by Daniel Keyes<br><p>When brain surgery makes a mouse into a genius, dull-witted Charlie Gordon wonders if it might also work for him.  It does ... but then the mouse begins to regress.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>39. <em>The War Of The Worlds</em> by H.G. Wells<br><p>With advanced machines of destruction, aliens from another planet swoop down on planet Earth and begin their conquest, in the classic sci-fi work by the author of <em>The Time Machine.</em></p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>40. <em>The Amber Chronicles</em> by Roger Zelazny<br><p>Zelazny's tales of Corwin, prince of the "true world" of Amber (of which our Earth is merely a shadow) and his son Merlin, a magic-user/computer hacker, have spanned several decades. Amid the eternal struggle between Order and Chaos, Zelazny delights in tossing in allusions to Shakespeare, the Tarot and quantum mechanics.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>41. <em>The Belgariad</em> by David Eddings<br><p>Edding's five-volume epic fantasy follows young farmboy Garion as he is drawn into a quest for a stolen mystical orb, and the rich world of prophecy and power that surrounds it.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>42. <em>The Mists Of Avalon</em> by Marion Zimmer Bradley<br><p>Retells the legend of King Arthur as perceived by the women central to the tale, from the zealous Morgaine, sworn to uphold her goddess at any cost, to the devout Gwenhwyfar, pledged to the king but drawn to another.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>43. <em>Mistborn Trilogy</em> by Brandon Sanderson<br><p>In a world where special magic users called Allomancers can employ metals to enhance their physical and mental abilities, a young thief discovers her destiny and sets out to overthrow the Lord Ruler.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>44. <em>Ringworld</em> by Larry Niven<br><p>Niven's hugely influential 1970 novel of an outer space expedition to a mysterious object &#8211; a vast artificial world in the shape of a ring &#8211; that goes horribly wrong.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>45. <em>The Left Hand Of Darkness</em> by Ursula K. Le Guin<br><p>While on a mission to the planet Gethen &#8212; a world whose inhabitants can  change their gender &#8212; earthling Genly Ai is sent by leaders of the  nation of Orgoreyn to a concentration camp. The exiled prime minister of  the nation of Karhide tries to rescue him.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>46. <em>The Silmarillion</em> by J.R.R. Tolkien<br><p>These creation myths of Tolkien's Middle-earth, for those who found The Lord of the Rings too breezy and slight: In the author's characteristic Beowulfian prose, he recounts the legends of the world's beginnings, the downfall of its gods and men, and the events that changed the face of Middle-earth forever.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>47. <em>The Once And Future King</em> by T.H. White<br><p>Describes King Arthur's life from his childhood to the coronation, creation of the Round Table, and search for the Holy Grail.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>48. <em>Neverwhere</em> by Neil Gaiman<br><p>Gaiman's wry, darkly whimsical tale of an average young businessman who stops to help a girl bleeding on a London sidewalk and finds himself pulled into a bizarre subterranean world.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>49. <em>Childhood's End</em> by Arthur C. Clarke<br><p>The author questions the survival of mankind in this science-fiction tale about Overlords from outer space who dominate the world.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>50. <em>Contact</em> by Carl Sagan<br><p>In 1999, a multinational team of astronauts ventures deep into outer space, where they come face to face with an advanced alien civilization.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>51. <em>The Hyperion Cantos</em> by Dan Simmons<br><p>Seven pilgrims undertake a voyage to the world of Hyperion &#8212; dominated by a fearsome and mysterious creature called the Shrike &#8212; where they hope to learn the secret that will save humanity.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>52. <em>Stardust</em> by Neil Gaiman<br><p>In the quiet English hamlet of Wall, Tristran Thorn embarks on a remarkable journey through the world of Faerie to recover a fallen star for his lover, the hauntingly beautiful Victoria Forester.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>53. <em>Cryptonomicon</em> by Neal Stephenson<br><p>More than 50 years after Lawrence Pritchard Waterhouse and Sergeant Bobby Shaftoe are assigned to Detachment 2702, a secret cryptographic mission, their grandchildren &#8212; Randy and Amy &#8212; join forces to create a "data haven" in the South Pacific, only to uncover a massive conspiracy with roots in Detachment 2702.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>54. <em>World War Z</em> by Max Brooks<br><p>An account of the decade-long conflict between humankind and hordes of the predatory undead is told from the perspective of dozens of survivors &#8212; soldiers, politicians, civilians and others &#8212; who describe in their own words the epic human battle for survival.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>55. <em>The Last Unicorn</em> by Peter S. Beagle<br><p>The last unicorn leaves the protection of her enchanted lavender forest to search for her own kind, with the assistance of Schmedrick, the only occasionally successful magician, and dreamer Molly Grue.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>56. <em>The Forever War</em> by Joe Haldeman<br><p>Drafted into the ranks of Earth's interstellar warriors, private William  Mandella finds his fight against the Taurans secondary to the  side-effects of faster-than-light space travel, which affects the rate  at which he ages.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>57. <em>Small Gods</em> by Terry Pratchett<br><p>Brutha, a simple man leading a quiet life tending his garden, finds his life irrevocably changed when his god, speaking to him through a tortoise, sends him on a mission of peace.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>58. <em>The Chronicles Of Thomas Covenant The Unbeliever</em> by Stephen R. Donaldson<br><p>In this first trilogy, reclusive, guilt-ridden writer Thomas Covenant finds himself transported to a magical realm where he is hailed as a hero who wields powerful magic &#8212; and where he finds his leprosy miraculously cured. Ultimately, he must defeat the malevolent Lord Foul to save the Land &#8212; and his own sanity.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>59. <em>The Vorkosigan Saga</em> by Lois McMaster Bujold<br><p>In a human colony on one of a series of planets connected by wormholes, a young man who suffers from a series of physical disabilities (the result of an assassination attempt on his royal parents) grows up to become a powerful military leader.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>60. <em>Going Postal</em> by Terry Pratchett<br><p>Sentenced to death for forgery and swindling, Moist von Lipwig accepts an offer of a pardon in exchange for revamping an ancient post office, but his efforts are thwarted by tons of undelivered mail, an 18,000-year-old ghost postman, his shoe-wielding new girlfriend, and murderous characters who want the post office shut down.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>61. <em>The Mote In God's Eye</em> by Larry Niven<br><p>The accidental killing of a group of emissaries to Earth threatens man's survival.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>62. <em>The Sword Of Truth Series</em> by Terry Goodkind<br><p>Young Richard Cypher gradually embraces his destiny as the Seeker of Truth, and sets out to stop the evil that others would unleash.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>63. <em>The Road</em> by Cormac McCarthy<br><p>In a novel set in an indefinite, futuristic, post-apocalyptic world, a  father and his young son make their way through the ruins of a  devastated American landscape, struggling to survive and preserve the  last remnants of their own humanity.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>64. <em>Jonathan Strange & Mr. Norrell</em> by Susanna Clarke<br><p>In nineteenth century England, all is going well for rich, reclusive Mr Norrell, who has regained some of the power of England's magicians from the past, until a rival magician, Jonathan Strange, appears and becomes Mr Norrell's pupil.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>65. <em>I Am Legend</em> by Richard Matheson<br><p>A lone human survivor in a world that is overrun by vampires, Robert Neville leads a desperate life in which he must barricade himself in his home every night and hunt down the starving undead by day.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>66. <em>The Riftwar Saga</em> by Raymond E. Feist<br><p>Evil entities have opened a rift in the fabric of space-time, plunging the world of Medkemia into peril. As the battle between Order and Chaos threatens to engulf everything, reluctant wizard Pug is the only hope of a thousand worlds.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>67. <em>The Sword of Shannara Trilogy</em> by Terry Brooks<br><p>Over the course of three novels, several generations of the Ohmsford family find themselves retrieving magical artifacts in the desperate hope to fight evil.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>68. <em>The Conan The Barbarian Series</em> by Robert E. Howard<br><p>Howard's original set of interlinked stories featuring his muscle-bound warrior represents a classic kind of sword-and-sorcery fantasy adventure in all its pulpy, richly imaginative glory.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>69. <em>The Farseer Trilogy</em> by Robin Hobb<br><p>An wily assassin plies his trade while his uncle the Prince confronts attackers  who are turning people into emotionless, zombie-like "Forged ones."</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>70. <em>The Time Traveler's Wife</em> by Audrey Niffenegger<br><p>Passionately in love, Clare and Henry vow to hold onto each other and their marriage as they struggle with the effects of Chrono-Displacement Disorder, a condition that casts Henry involuntarily into the world of time travel.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>71. <em>The Way Of Kings</em> by Brandon Sanderson<br><p>Introduces the world of Roshar through the experiences of a war-weary royal compelled by visions, a high-born youth condemned to military slavery, and a woman who is desperate to save her impoverished house.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>72. <em>Journey To The Center Of The Earth</em> by Jules Verne<br><p>Follows Professor Lidenbrock, his nephew Axel and their guide Hans as they venture deep into a volcanic crater in Iceland on a journey that leads them to the center of the earth and to incredible and horrifying discoveries.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>73. <em>The Legend Of Drizzt Series</em> by R. A. Salvatore<br><p>Drizzt Do'Urden, a Dark Elf, finds adventure, peril and awesome magical  power as he confronts the underground civilization of the evil and  treacherous matriarchal race of Drow elves.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>74. <em>Old Man's War</em> by John Scalzi<br><p>Enlisting in the Army on his 75th birthday, John Perry joins an interstellar war between Earth and alien enemies who would stake claims on the few existing inhabitable planets, unaware that the conflict involves much more than he understands.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>75. <em>The Diamond Age</em> by Neal Stephenson<br><p>The story of an engineer who creates a device to raise a girl capable of thinking for herself reveals what happens when a young girl of the poor underclass obtains the device.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>76. <em>Rendezvous With Rama</em> by Arthur C. Clarke<br><p>During the 22nd century, a space probe's investigation of a mysterious, cylindrical asteroid brings man into contact with an extra-galactic civilization.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>77. <em>The Kushiel's Legacy Series</em> by Jacqueline Carey<br><p>Sold into indentured servitude at the exotic Night Court as a child, Phedre  faces a difficult choice between honor and duty as she deals with a world of  glittering luxury, conspiracy, sacrifice, and betrayal. Two subsequent trilogies  chronicle the adventures of her adopted son and her distant descendant.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>78. <em>The Dispossessed</em> by Ursula K. Le Guin<br><p>Unwilling to accept that his anarchist world must be separated from the rest of the civilized universe, Shevek, a brilliant physicist, risks his life by traveling to the utopian mother planet of Urras.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>79. <em>Something Wicked This Way Comes</em> by Ray Bradbury<br><p>When the carnival comes to town, two boys unearth the terrifying and  horrible secrets that lurk within Cooger &amp; Dark's Pandemonium Shadow  Show and learn the consequences of wishes, as a sinister and evil force  is at work in Green Town, Ill.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>80. <em>Wicked</em> by Gregory Maguire<br><p>Set in an Oz where a morose Wizard battles suicidal thoughts, the story of the green-skinned Elphaba, otherwise known as the Wicked Witch of the West, profiles her as an animal-rights activist striving to avenge her dear sister's death.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>81. <em>The Malazan Book Of The Fallen series</em> by Steven Erikson<br><p>Erickson's densely plotted series jumps around in time to chronicle the vicissitudes of the sprawling Malazan Empire, a place of shifting alliances, mysterious mage guilds, assassin gods and military uprisings.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>82. <em>The Eyre Affair</em> by Jasper Fforde<br><p>In a world where you can actually get lost (literally) in literature, Thursday Next, a notorious Special Operative in literary detection, races against time to stop the world's Third Most Wanted criminal from kidnapping characters, including Jane Eyre, from works of literature, forcing her to dive into the pages of a novel to stop literary homicide, in a wildly imaginative, mesmerizing thriller.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>83. <em>The Culture Series</em> by Iain Banks<br><p>A science-fiction series by the author of <em>the Wasp Factory </em>features  a symbiotic human and machine society that is engaged in a galaxy-wide  battle to the death between the Idrians, who fight for their faith, and  the Culture, which defends its right to exist.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>84. <em>The Crystal Cave</em> by Mary Stewart<br><p>Stewart's first chapter in her five-volume take on the Arthurian legend is told from the point of view of young Merlin, who reluctantly engineers the birth of Arthur.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>85. <em>Anathem</em> by Neal Stephenson<br><p>Raz, who has lived in a monastery since childhood, away from the violent upheavals of the outside world, becomes one of a group of formerly cloistered scholars who are appointed by a higher power to avert an impending disaster.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>86. <em>The Codex Alera Series</em> by Jim Butcher<br><p>In the land of Alera, where people bond with the furies &#8212; elementals of  earth, air, fire, water, and metal &#8212; young Tavi struggles to cope with his  lack of magical talent, until his homeland erupts into conflict between  rebels and loyalists and Tavi discovers that he holds the key to his  realm's survival.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>87. <em>The Book Of The New Sun</em> by Gene Wolfe<br><p>In the distant future, after the sun has cooled and dimmed, the disgraced torturer Sevarian recounts his hard-fought rise to absolute power.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>88. <em>The Thrawn Trilogy</em> by Timothy Zahn<br><p>Five years after the fall of the Empire, a dying part of the Empire all the more dangerous near death has just discovered something that could bring it back, the last of the Emperor's warlords, Admiral Thrawn.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>89. <em>The Outlander Series</em> by Diana Gabaldon<br><p>Hurtled back through time more than 200 hundred years to Scotland in  1743, Claire Randall finds herself in the midst of a world torn apart by  violence, pestilence and revolution, and haunted by her feelings for a  young soldier.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>90. <em>The Elric Saga</em> by Michael Moorcock<br><p>Elric of Melnibone, an albino prince, travels in the Ship Which Sails  Over Land and Sea to the city of Dhoz-Kam, through the Shade Gate to the  Pulsing Cavern where the magic swords Stormbringer and Mournblade await  him.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>91. <em>The Illustrated Man</em> by Ray Bradbury<br><p>Eighteen science fiction stories deal with love, madness and death on Mars, Venus and in space.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>92. <em>Sunshine</em> by Robin McKinley<br><p>All hope for stopping the vampiric elite from controlling Earth depends on human SOFs (Special Other Forces) and the success of their attempt to recruit Sunshine, the daughter of legendary sorcerer Onyx Blaise.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>93. <em>A Fire Upon The Deep</em> by Vernor Vinge<br><p>Set in a far-future where space has been portioned into "regions of thought," a human expedition to an ancient data archive unleashes the Blight, a superintelligent entity capable of destroying thousands of worlds.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>94. <em>The Caves Of Steel</em> by Isaac Asimov<br><p>Fearing a violent confrontation between Earthmen and Spacers, Detective Baley and his new partner, a robot, investigate the murder of a Spacetown scientist</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>95. <em>The Mars Trilogy</em> by Kim Stanley Robinson<br><p>On  a mission to provide Mars with an Earth-like atmosphere, John Boone,  Maya Toitovna, Frank Chalmers and Arkady Bogdanov meet stiff resistance  from those who will fight to the death to prevent Mars from being  changed.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>96. <em>Lucifer's Hammer</em> by Larry Niven<br><p>As the great Hamner-Brown comet, dubbed Lucifer's Hammer by the press, approaches Earth, various business executives, politicians, criminals, journalists and scientists await the impending cataclysm and its general and personal effects with decidedly differing feelings</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>97. <em>Doomsday Book</em> by Connie Willis<br><p>Stranded in the 14th century &#8212; a time of superstition and fear &#8212; time traveler Kivrin becomes an unlikely angel of hope during history's darkest hour and awaits rescue by her comrades.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>98. <em>Perdido Street Station</em> by China Mieville<br><p>In the squalid, Gothic city of New Crobuzon, a mysterious half-human, half-bird stranger comes to Isaac, a gifted but eccentric scientist, with a request to help him fly, but Isaac's obsessive experiments and attempts to grant the request unleash a terrifying dark force on the entire city.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>99. <em>The Xanth Series</em> by Piers Anthony<br><p>In Anthony's pun-besotted magical realm (which is shaped a lot like Florida),  every human is born with a unique magical ability, which they use navigate a  landscape full of dragons, goblins, harpies, centaurs and all manner of eldritch  creatures.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    <tr><td>100. <em>The Space Trilogy</em> by C.S. Lewis<br><p>Philologist Edwin Ransom travels to Mars and Venus, and makes a series of dramatic discoveries about Earth's place in the solar system &#8211; and the nature of a threat it unwittingly faces.</p></td>
+    <td><input type='checkbox' class='counter' onclick='calculate_score();'></td></tr>
+    
+    </table>
+</div> <!-- booklist -->
+<div id='counterbox'>
+    <h3>You have read <span id='countertext'>x</span>/100 books.</h3>
+</div> <!-- counter -->
+</div> <!-- container -->
+</body>
+</html>
